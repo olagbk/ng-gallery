@@ -1,7 +1,11 @@
 @import '~@angular/material/theming';
-@import 'variables';
 
 @include mat-core();
 
-@include angular-material-theme($demo-light-theme);
+$demo-primary: mat-palette($mat-deep-purple);
+$demo-accent: mat-palette($mat-blue-grey, 500, 400, 600);
+$demo-warn: mat-palette($mat-red);
 
+$demo-theme: mat-light-theme($demo-primary, $demo-accent, $demo-warn);
+
+@include angular-material-theme($demo-theme);
