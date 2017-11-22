@@ -6,4 +6,5 @@ export interface GalleryDescConfig {
     text?: boolean;
     counter?: boolean;
     style?;
+    prefixes?: string[];
 }

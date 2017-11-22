@@ -34,4 +34,15 @@ export class GalleryTextComponent implements OnInit {
       this.renderer.setStyle(el, 'bottom', 0);
     }
   }
+  hasValidTitle() {
+    const title = this.state.images[this.state.currIndex].text;
+    if (this.config.prefixes) {
+        for (let p of this.config.prefixes) {
+            if (title.indexOf(p) === 0) {
+                return false;
+            }
+        }
+    }
+    return true;
+  }
 }
