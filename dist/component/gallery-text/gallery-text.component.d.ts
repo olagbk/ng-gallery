@@ -8,4 +8,5 @@ export declare class GalleryTextComponent implements OnInit {
     config: GalleryDescConfig;
     constructor(el: ElementRef, renderer: Renderer2);
     ngOnInit(): void;
+    hasValidTitle(): boolean;
 }
